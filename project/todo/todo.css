@@ -1,0 +1,113 @@
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #1f1f1f;
+  padding: 1rem;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px;
+}
+
+#title {
+  margin-right: 0.5rem;
+}
+
+#editTitle {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#editTitle:hover {
+  background-color: #575757;
+}
+
+#newTask {
+  flex: 0 0 65%;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem;
+}
+
+#addbtn {
+  flex: 0 0 2.2%;
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  transition: background-color 0.3s;
+  height: 30px;
+}
+
+#addbtn:hover {
+  background-color: red;
+}
+
+#search {
+  flex: 0 0 20%;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1f1f1f;
+  margin: 0.5rem;
+  padding: 1.3rem;
+  border-radius: 6px;
+}
+
+.task span {
+  flex: 1;
+  margin: 0 1rem;
+}
+
+.radio, .edit, .delete {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  margin: 0 0.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.radio:hover, .edit:hover, .delete:hover {
+  background-color: #575757;
+}
+.edit:hover{
+  background-color: green;
+}
+.delete:hover {
+  background-color: red;
+}
+
+.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
