@@ -1,6 +1,4 @@
 import {test} from "@playwright/test"
-import { log } from "node:console"
-
 //! fixtures --> it is a setup block of code which is reusable
 
 /**
