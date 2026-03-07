@@ -15,7 +15,6 @@ test("childScopeResolution" ,async({page})=>{
     await page.goto("https://www.amazon.in")
     await page.locator('//input[@id="twotabsearchtextbox"]').fill("shoes")
     await page.locator('//input[@type="submit"]').click()
-    // this gives 3rd item in any tag contains "wo" be it a heading or tag
     let price = await page.locator('//span[@class="a-price"]/child::span/span[@class="a-price-whole" and .="4,895"]').textContent() 
     console.log(price);
 })
@@ -33,7 +32,6 @@ test("preceding-sibling" ,async({page})=>{
     await page.goto("https://www.amazon.in")
     await page.locator('//input[@id="twotabsearchtextbox"]').fill("shoes")
     await page.locator('//input[@type="submit"]').click()
-    // this gives 3rd item in any tag contains "wo" be it a heading or tag
     let rupeeLogo = await page.locator('//span[@class="a-price"]/descendant::span[@class="a-price-whole" and .="4,895"]/preceding-sibling::span').textContent() 
     console.log(rupeeLogo);
 })
@@ -42,7 +40,6 @@ test("following-sibling" ,async({page})=>{
     await page.goto("https://www.amazon.in")
     await page.locator('//input[@id="twotabsearchtextbox"]').fill("shoes")
     await page.locator('//input[@type="submit"]').click()
-    // this gives 3rd item in any tag contains "wo" be it a heading or tag
     let price = await page.locator('//header/descendant::div[@id="nav-cart-count-container"]/following-sibling::div').textContent() 
     console.log(price);
 })
@@ -51,7 +48,6 @@ test("parent" ,async({page})=>{
     await page.goto("https://www.amazon.in")
     await page.locator('//input[@id="twotabsearchtextbox"]').fill("shoes")
     await page.locator('//input[@type="submit"]').click()
-    // this gives 3rd item in any tag contains "wo" be it a heading or tag
     let price = await page.locator('//span[@class="a-price"]/child::span/span[@class="a-price-whole" and .="4,895"]').textContent() 
     console.log(price);
 })
@@ -60,7 +56,6 @@ test("ancestor" ,async({page})=>{
     await page.goto("https://www.amazon.in")
     await page.locator('//input[@id="twotabsearchtextbox"]').fill("shoes")
     await page.locator('//input[@type="submit"]').click()
-    // this gives 3rd item in any tag contains "wo" be it a heading or tag
     let price = await page.locator('//span[@class="a-price"]/child::span/span[@class="a-price-whole" and .="4,895"]').textContent() 
     console.log(price);
 })
@@ -70,7 +65,6 @@ test("samsung_price" ,async({page})=>{
     await page.goto("https://www.amazon.in")
     await page.locator('//input[@id="twotabsearchtextbox"]').fill("phones")
     await page.locator('//input[@type="submit"]').click()
-    // this gives 3rd item in any tag contains "wo" be it a heading or tag
     let price = await page.locator('//div[@class="a-section a-spacing-none puis-spacing-top-micro asin-scannability-font-style puis-padding-right-small s-title-instructions-style puis-desktop-list-title-instructions-style"]/ancestor::div[@class ="a-section a-spacing-small a-spacing-top-small"]/descendant::span[@class="a-price-whole" and .="15,499"]').textContent() 
     console.log(price);
 })
