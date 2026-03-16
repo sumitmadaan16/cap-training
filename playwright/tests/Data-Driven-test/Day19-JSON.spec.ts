@@ -5,7 +5,9 @@ import path from 'path'
 
 let file = fs.readFileSync(path.join(__dirname, "../../testData/data.json"))
 let file2 = fs.readFileSync(path.join(__dirname, "../../testData/valid_invalid.json"))
+//@ts-ignore
 let dataFile = JSON.parse(file)
+//@ts-ignore
 let dataFile2 = JSON.parse(file2)
 
 test("JSON data", async ({ page }) => {
